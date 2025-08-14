@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>View My AR Model</title>
+  <title>qnips AR Product Viewer</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <!-- Model Viewer library for AR in browsers -->
   <script type="module"
     src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
   </script>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
     body {
       background: #f5f5f5;
-      font-family: Arial, sans-serif;
+      font-family: IBM-Plex-Sans, sans-serif;
       margin: 0;
       text-align: center;
     }
@@ -46,27 +47,51 @@
       color: #888;
       font-size: 0.95em;
     }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1em;
+      padding: 0 1em;
+    }
   </style>
 </head>
 <body>
   <header>
-    My Augmented Reality Model Viewer
+    qnips AR Product Viewer
   </header>
-  <main>
-    <div class="instructions">
-      Tap the AR button on your phone to view this model in augmented reality.<br>
-      Works on Android (GLB/GLTF) and iOS (USDZ).
-    </div>
-    <!-- Replace src and ios-src URLs below with your own model file links -->
-    <model-viewer
-      src="model/stele.glb"
-      ios-src="model/True Fruits.usdz"
-      ar
-      ar-modes="webxr scene-viewer quick-look"
-      camera-controls
-      auto-rotate
-      alt="A 3D model of an astronaut">
-    </model-viewer>
-  </main>
+  <div class="grid">
+    <main>
+      <div class="instructions">
+        Tap the AR button on your phone to view this model in augmented reality.<br>
+        Works on Android (Chrome) and iOS (Safari).
+      </div>
+      <!-- Replace src and ios-src URLs below with your own model file links -->
+      <model-viewer
+        src="model/stele.glb"
+        ios-src="model/True Fruits.usdz"
+        ar
+        ar-modes="webxr scene-viewer quick-look"
+        camera-controls
+        auto-rotate
+        alt="A 3D model of an astronaut">
+      </model-viewer>
+    </main>
+    <main>
+      <div class="instructions">
+        Tap the AR button on your phone to view this model in augmented reality.<br>
+        Works on Android (Chrome) and iOS (Safari).
+      </div>
+      <!-- Replace src and ios-src URLs below with your own model file links -->
+      <model-viewer
+        src="model/stele.glb"
+        ios-src="model/True Fruits.usdz"
+        ar
+        ar-modes="webxr scene-viewer quick-look"
+        camera-controls
+        auto-rotate
+        alt="A 3D model of an astronaut">
+      </model-viewer>
+    </main>
+  </div>
 </body>
 </html>
