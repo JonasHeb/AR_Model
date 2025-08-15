@@ -10,7 +10,7 @@ box-sizing: border-box;
 pointer-events: none;
 }
 
-.hotspot[slot="hotspot-hand"] {
+.hotspot[slot="hotspot-1"] {
 --min-hotspot-opacity: 0;
 background-color: red;
 }
