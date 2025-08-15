@@ -1,31 +1,32 @@
 
 .hotspot {
-display: block;
-width: 20px;
-height: 20px;
-border-radius: 10px;
-border: none;
-background-color: blue;
-box-sizing: border-box;
-pointer-events: auto;
-cursor: pointer;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: blue;
+    box-sizing: border-box;
+    pointer-events: auto;
+    cursor: pointer;
 }
 
 .hotspot[slot="hotspot-1"] {
---min-hotspot-opacity: 0;
-background-color: red;
+    --min-hotspot-opacity: 0;
+    background-color: rgb(200, 200, 200);
 }
 .annotation {
-background-color: #888888;
-position: absolute;
-transform: translate(10px, 10px);
-border-radius: 10px;
-padding: 10px;
+    background-color: #888888;
+    position: absolute;
+    transform: translate(10px, 10px);
+    border-radius: 10px;
+    padding: 10px;
+    transform: translate3d(-50%, -50%, 0);
 }
 
 /* This keeps child nodes hidden while the element loads */
-:not(:defined)>* {
-display: none;
+    :not(:defined)>* {
+    display: none;
 }
 
 
