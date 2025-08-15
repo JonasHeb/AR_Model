@@ -1,5 +1,5 @@
 
-.Hotspot {
+.hotspot {
 display: block;
 width: 20px;
 height: 20px;
@@ -10,11 +10,11 @@ box-sizing: border-box;
 pointer-events: none;
 }
 
-.Hotspot[slot="Hotspot-1"] {
+.hotspot[slot="hotspot-1"] {
 --min-hotspot-opacity: 0;
 background-color: red;
 }
-.HotspotAnnotation {
+.hotspot_annotation {
 background-color: #888888;
 position: absolute;
 transform: translate(10px, 10px);
