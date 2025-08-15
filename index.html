@@ -4,56 +4,11 @@
   <meta charset="UTF-8">
   <title>qnips AR Product Viewer</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
   <!-- Model Viewer library for AR in browsers -->
   <script type="module"
     src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
   </script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-    body {
-      background: #f5f5f5;
-      font-family: IBM-Plex-Sans, sans-serif;
-      margin: 0;
-      text-align: center;
-    }
-    header {
-      background: #2d2d2d;
-      color: white;
-      padding: 1em 0;
-      font-size: 2em;
-    }
-    main {
-      margin: 2em auto;
-      max-width: 660px;
-      background: white;
-      padding: 2em;
-      border-radius: 1em;
-      box-shadow: 0 0.5em 2em #bbb2;
-    }
-    model-viewer {
-      width: 100%;
-      height: 400px;
-      background: #eef;
-      border: 1px solid #ccc;
-      border-radius: 1em;
-    }
-    .instructions {
-      margin: 2em 0 0.5em 0;
-      color: #444;
-      font-size: 1.15em;
-    }
-    footer {
-      margin: 2em 0 1em 0;
-      color: #888;
-      font-size: 0.95em;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1em;
-      padding: 0 1em;
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -75,6 +30,11 @@
         camera-controls
         auto-rotate
         alt="A 3D model of an astronaut">
+
+        <button class="hotspot" slot="hotspot-visor" data-position="0 1.75 0.35" data-normal="0 0 1"></button>
+        <button class="hotspot" slot="hotspot-hand" data-position="-0.54 0.93 0.1" data-normal="-0.73 0.05 0.69">
+          <div class="annotation">This hotspot disappears completely</div>
+        </button>
       </model-viewer>
     </main>
     <main>
