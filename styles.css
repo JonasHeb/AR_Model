@@ -14,7 +14,7 @@ pointer-events: none;
 --min-hotspot-opacity: 0;
 background-color: red;
 }
-.hotspot_annotation {
+.annotation {
 background-color: #888888;
 position: absolute;
 transform: translate(10px, 10px);
