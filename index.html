@@ -26,6 +26,7 @@
         ios-src="model/True Fruits.usdz"
         autoplay
         ar
+        ar-placement="wall"
         ar-modes="webxr scene-viewer quick-look"
         camera-controls
         alt="A 3D model of an astronaut">
@@ -41,7 +42,7 @@
       </div>
       <!-- Replace src and ios-src URLs below with your own model file links -->
       <model-viewer
-        src="model/stele.glb"
+        src="model/tv.glb"
         ios-src="model/True Fruits.usdz"
         ar
         ar-modes="webxr scene-viewer quick-look"
@@ -84,21 +85,21 @@
     </main>
   </div>
   <script type="module">
-          const modelViewer = document.querySelector('model-viewer[src="model/Stele_animated.glb"]');
-          const annotationClicked = (annotation) => {
-            let dataset = annotation.dataset;
-            if (dataset.target) {
-              modelViewer.cameraTarget = dataset.target;
-            }
-            if (dataset.orbit) {
-              modelViewer.cameraOrbit = dataset.orbit;
-            }
-            modelViewer.fieldOfView = '45deg';
-          }
+    const modelViewer = document.querySelector('model-viewer[src="model/Stele_animated.glb"]');
+    const annotationClicked = (annotation) => {
+      let dataset = annotation.dataset;
+      if (dataset.target) {
+        modelViewer.cameraTarget = dataset.target;
+      }
+      if (dataset.orbit) {
+        modelViewer.cameraOrbit = dataset.orbit;
+      }
+      modelViewer.fieldOfView = '45deg';
+    }
 
-          modelViewer.querySelectorAll('button').forEach((hotspot) => {
-            hotspot.addEventListener('click', () => annotationClicked(hotspot));
-          });
-        </script>
+    modelViewer.querySelectorAll('button').forEach((hotspot) => {
+      hotspot.addEventListener('click', () => annotationClicked(hotspot));
+    });
+</script>
 </body>
 </html>
